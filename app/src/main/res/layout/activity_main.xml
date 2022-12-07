@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background1"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:paddingStart="75dp"
+        android:textStyle="bold"
+
+        android:shadowColor="#1B1919"
+        android:shadowDx="1.9"
+        android:shadowDy="1.9"
+        android:shadowRadius="1.3"
+        android:textAllCaps="true"
+        android:typeface="serif"
+        android:textColor="#FAFBFA"
+
+
+        android:text="   Welcome \nto My Game!"
+
+        android:textSize="35dp"
+
+        />
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/wifi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        />
+
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="435dp"
+        android:background="#A3FFFFFF"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="60dp"
+
+        >
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/message"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:paddingTop="5dp"
+            android:text="Dear player!\n\nTo pass this game you must\nfulfill 4 conditions. \n\n1. You have to make sure that you are in a lighted place.\n\n2. Check if your phone is not connected to a charger.\n\n3. Write what is the name of your wifi connection\n\n4. When someone asking you to say something, dont forget what is the magic word!\n\n  To start press on the button.\nGood Luck! "
+            android:textColor="#5E382C"
+            android:textSize="18dp"
+            android:textStyle="bold"
+
+            android:typeface="serif"
+
+            />
+
+
+    </LinearLayout>
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/start"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:text="Lets Start"
+        android:layout_gravity="center_horizontal"
+        android:backgroundTint="#BA0D24"
+        android:layout_marginTop="20dp"
+        android:textStyle="bold"
+        android:textSize="15dp"
+        />
+
+</LinearLayout>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="200dp"
+    android:layout_height="200dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/close"
+        android:layout_width="17dp"
+        android:layout_height="17dp"
+        android:layout_gravity="end"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:background="@drawable/remove"
+        app:backgroundTint="@android:color/primary_text_dark_nodisable"
+        app:backgroundTintMode="multiply"
+        tools:ignore="SpeakableTextPresentCheck" />
+    <TextView
+        android:id="@+id/text_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:textSize="15dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:text="ddd"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+
+        android:textColor="#1C0C0C"
+        android:shadowColor="#0B0000"
+        android:shadowDx="2.2"
+        android:shadowDy="2.2"
+        android:shadowRadius="1.5"
+        android:textAllCaps="true"
+        />
+    <ImageView
+        android:id="@+id/photo"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/light"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center_horizontal"
+
+
+        />
+
+
+
+
+</LinearLayout>
