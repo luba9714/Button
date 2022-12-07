@@ -61,40 +61,34 @@ public class CheckScreen extends AppCompatActivity implements SensorEventListene
             @Override
             public void onClick(View v) {
                 isCharging=checkBattery();
-                if(isCharging==false) {
+                if(!isCharging) {
                     wifiInfo = wifiManager.getConnectionInfo();
                     if (wifiInfo.getSSID().equalsIgnoreCase("\""+wifi.getText().toString()+"\"")) {
                             if (lightSensor.getType() == Sensor.TYPE_LIGHT && event.values[0] > 0.0) {
                                 if (spokenText.equalsIgnoreCase("please")||spokenText.equalsIgnoreCase("בבקשה")) {
                                     startActivity(home);
                                     finish();
-                                    //message.setText("success");
                                 } else if (spokenText.equalsIgnoreCase("")) {
-                                    //warning.setText("*Try to say it again");
                                     popUpMessege("Make sure you actually said the word", "mic");
                                 } else if (!spokenText.equalsIgnoreCase("") && !spokenText.equalsIgnoreCase("please")) {
                                     popUpMessege("Try to say it again", "mic");
                                 }
                             } else {
-                                //warning.setText("*It's a little dark in here, don't you think? ");
                                 popUpMessege("It's a little dark in here, don't you think? ", "light");
                             }
 
-                    } else if(wifiInfo.getSSID().equalsIgnoreCase("<unknown ssid>")){
+                    } else if(wifi.getText().toString().equalsIgnoreCase("")){
                         popUpMessege("Please write the name of your wifi connection", "wifi");
                     }else{
                         popUpMessege("Not the right name.. try again", "wifi");
                     }
 
                 }else{
-                    //warning.setText("*Pay attention that the phone is not in the charger ");
                     popUpMessege("Pay attention that the phone is not connected to a charger ","charger");
 
                 }
             }
         });
-
-
     }
 
     @Override
